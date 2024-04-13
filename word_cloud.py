@@ -11,7 +11,7 @@ data = pd.read_csv('./resources/train.csv')
 text = ' '.join(data['tweets'].astype(str))
 
 # Define the words to be ignored
-stop_words = ['t.co', 'https', 'is', 'to', 'a', 'in', 'that', 'it', 'of', 'for', 'â','¢','‚','¬','Â','¦','’',"It's",'Ã','..','Å', 'RT', 't', 'co'] 
+stop_words = ['â','¢','‚','¬','Â','¦','’',"It's",'Ã','..','Å'] 
 
 # Load the image to be used as the mask
 twitter_mask = np.array(Image.open("images.png").convert("RGB"))
