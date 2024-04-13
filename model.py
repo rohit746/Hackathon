@@ -45,9 +45,9 @@ if __name__ == '__main__':
 
     # load in data
     print('loading in data')
-    train = pd.read_csv('https://raw.githubusercontent.com/monicafar147/classification-predict-streamlit-template/master/climate-change-belief-analysis/train.csv')
+    train = pd.read_csv('./resources/train.csv')
     print(train.head())
-    train['processed'] = train['message'].apply(preprocess)
+    train['processed'] = train['tweets'].apply(preprocess)
     print('data preprocessed')
     #print(train.head())
 
